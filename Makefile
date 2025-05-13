@@ -108,7 +108,8 @@ $(RISCV)/u-boot.bin: u-boot/u-boot.bin
 	cp $< $@
 
 $(MKIMAGE) u-boot/u-boot.bin: $(CC)
-	make -C u-boot openhwgroup_cv$(XLEN)a6_genesysII_defconfig
+#	make -C u-boot openhwgroup_cv$(XLEN)a6_genesysII_defconfig
+	make -C u-boot openhwgroup_cv$(XLEN)a6_kcu116_defconfig
 	make -C u-boot CROSS_COMPILE=$(TOOLCHAIN_PREFIX)
 
 # OpenSBI with u-boot as payload
