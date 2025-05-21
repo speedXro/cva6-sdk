@@ -1,5 +1,7 @@
 # CVA6 SDK
 
+This is the kcu116 branch of the fork of cva6-sdk for AMD KCU116 development board running at 100 MHz.
+
 This repository houses a set of RISCV tools for the [CVA6 core](https://github.com/openhwgroup/cva6). Most importantly it **does not contain openOCD**.
 
 Included tools:
