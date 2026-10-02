@@ -75,22 +75,14 @@ void Delay_us(int nrs)
 }
 
 int16_t stft_data_in_init_i16_sins[128] = {
-    0, 17581, 22478, 20048, 23050, 29758, 26266, 9350,
-    -7000, -12081, -13332, -21980, -32768, -31689, -17120, -3850,
-    0, 3850, 17120, 31689, 32767, 21980, 13332, 12081,
-    7000, -9350, -26266, -29758, -23050, -20048, -22478, -17581,
-    0, 17581, 22478, 20048, 23050, 29758, 26266, 9350,
-    -7000, -12081, -13332, -21980, -32768, -31689, -17120, -3850,
-    0, 3850, 17120, 31689, 32767, 21980, 13332, 12081,
-    7000, -9350, -26266, -29758, -23050, -20048, -22478, -17581,
-    0, 17581, 22478, 20048, 23050, 29758, 26266, 9350,
-    -7000, -12081, -13332, -21980, -32768, -31689, -17120, -3850,
-    0, 3850, 17120, 31689, 32767, 21980, 13332, 12081,
-    7000, -9350, -26266, -29758, -23050, -20048, -22478, -17581,
-    0, 17581, 22478, 20048, 23050, 29758, 26266, 9350,
-    -7000, -12081, -13332, -21980, -32768, -31689, -17120, -3850,
-    0, 3850, 17120, 31689, 32767, 21980, 13332, 12081,
-    7000, -9350, -26266, -29758, -23050, -20048, -22478, -17581
+    4276, -14013, -13722, 30627, 4771, 2604, -28136, 20753, -13968, -13892, -1868, 2759, -15227, 21493, 660, 26466,
+    -15599, 13831, -30894, 28811, -19692, 24987, 29354, 22923, -5332, 26871, 32128, 29406, -22021, -5584, -24512, -16048,
+    22449, 2935, -29515, -1362, 26145, -28440, 13644, 8707, 21465, -8045, 8105, 15396, 29726, -2885, 5900, 2715,
+    -28120, -11517, 3830, 1242, -21091, -1995, -32292, -12998, -18856, 11990, 15054, 6479, 20667, -10559, 3026, 18875,
+    25062, -22069, -10672, -23212, -15409, 7022, 14258, 11612, -3472, 7016, 19634, -27320, -11262, -6541, -31384, -2765,
+    -14989, 20520, -17166, -31656, 8466, -9418, 7319, 31356, 15831, 17811, -11821, -14896, 19182, -13332, -8915, -12338,
+    26776, -29218, -18505, -24487, 11798, 16394, 27924, -8332, 14973, -14501, 26167, -12951, 21930, 14563, -27411, 29571,
+    25469, 5824, 25058, 1246, -22954, -17211, 26865, -10265, -10449, 29196, -16603, -1947, -5124, -12973, -23224, -19381
 };
 
 int16_t stft_data_in_init_i16_testdata[128] = {
@@ -112,26 +104,42 @@ int16_t stft_data_in_init_i16_testdata[128] = {
     2048,2048,2048,2048,2048,2048,2048,2048
 };
 
-uint64_t stft_data_in_init_u64_sins[32] = {
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
-    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+uint64_t stft_data_in_init_u64_sins[64] = {
+    0xffffc943000010b4ULL, 0x000077a3ffffca66ULL, 0x00000a2c000012a3ULL, 0x00005111ffff9218ULL,
+    0xffffc9bcffffc970ULL, 0x00000ac7fffff8b4ULL, 0x000053f5ffffc485ULL, 0x0000676200000294ULL,
+    0x00003607ffffc311ULL, 0x0000708bffff8752ULL, 0x0000619bffffb314ULL, 0x0000598b000072aaULL,
+    0x000068f7ffffeb2cULL, 0x000072de00007d80ULL, 0xffffea30ffffa9fbULL, 0xffffc150ffffa040ULL,
+    0x00000b77000057b1ULL, 0xfffffaaeffff8cb5ULL, 0xffff90e800006621ULL, 0x000022030000354cULL,
+    0xffffe093000053d9ULL, 0x00003c2400001fa9ULL, 0xfffff4bb0000741eULL, 0x00000a9b0000170cULL,
+    0xffffd303ffff9228ULL, 0x000004da00000ef6ULL, 0xfffff835ffffad9dULL, 0xffffcd3affff81dcULL,
+    0x00002ed6ffffb658ULL, 0x0000194f00003aceULL, 0xffffd6c1000050bbULL, 0x000049bb00000bd2ULL,
+    0xffffa9cb000061e6ULL, 0xffffa554ffffd650ULL, 0x00001b6effffc3cfULL, 0x00002d5c000037b2ULL,
+    0x00001b68fffff270ULL, 0xffff954800004cb2ULL, 0xffffe673ffffd402ULL, 0xfffff533ffff8568ULL,
+    0x00005028ffffc573ULL, 0xffff8458ffffbcf2ULL, 0xffffdb3600002112ULL, 0x00007a7c00001c97ULL,
+    0x0000459300003dd7ULL, 0xffffc5d0ffffd1d3ULL, 0xffffcbec00004aeeULL, 0xffffcfceffffdd2dULL,
+    0xffff8dde00006898ULL, 0xffffa059ffffb7b7ULL, 0x0000400a00002e16ULL, 0xffffdf7400006d14ULL,
+    0xffffc75b00003a7dULL, 0xffffcd6900006637ULL, 0x000038e3000055aaULL, 0x00007383ffff94edULL,
+    0x000016c00000637dULL, 0x000004de000061e2ULL, 0xffffbcc5ffffa656ULL, 0xffffd7e7000068f1ULL,
+    0x0000720cffffd72fULL, 0xfffff865ffffbf25ULL, 0xffffcd53ffffebfcULL, 0xffffb44bffffa548ULL
 };
 
-uint64_t stft_data_in_init_u64_testdata[32] = {
-    0x77a3ca66c94310b4ULL, 0x0511192180a2c12a3ULL, 0x0ac7f8b4c9bcc970ULL, 0x6762029453f5c485ULL,
-    0x708b87523607c311ULL, 0x598b72aa619bb314ULL, 0x72de7d8068f7eb2cULL, 0xc150a040ea30a9fbULL,
-    0xfaae8cb50b7757b1ULL, 0x2203354c90e86621ULL, 0x3c241fa9e09353d9ULL, 0x0a9b170cf4bb741eULL,
-    0x04da0ef6d3039228ULL, 0xcd3a81dcf835ad9dULL, 0x194f3ace2ed6b658ULL, 0x49bb0bd2d6c150bbULL,
-    0xa554d650a9cb61e6ULL, 0x2d5c37b21b6ec3cfULL, 0x95484cb21b68f270ULL, 0xf5338568e673d402ULL,
-    0x8458bcf25028c573ULL, 0x7a7c1c97db362112ULL, 0xc5d0d1d345933dd7ULL, 0xcfcedd2dcbec4aeeULL,
-    0xa059b7b78dde6898ULL, 0xdf746d14400a2e16ULL, 0xcd696637c75b3a7dULL, 0x738394ed38e355aaULL,
-    0x04de61e216c0637dULL, 0xd7e768f1bcc5a656ULL, 0xf865bf25720cd72fULL, 0xb44ba548cd53ebfcULL
+uint64_t stft_data_in_init_u64_testdata[64] = {
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,
+    0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL,0x0800080008000800ULL
 };
 
 void STFT_Test(uint64_t* stft_in, uint64_t *hw_out, uint32_t *sw_out, int type, int print_values, uint8_t pixfloor, uint8_t datatest)
@@ -406,26 +414,29 @@ void FIDCT2D_Test(uint64_t* fdct_in, uint64_t* fdct_hw_out, uint64_t* fdct_sw_ou
     tt_stop = time_now();
     dur_hw1 = tt_stop - tt_start;
 
-    printf("FDCT Test Results SW vs HW:\n");
-    for(int k=0;k<512;k+=4)
+    if(print_values)
     {
-        printf("%016lx %016lx %016lx %016lx || %016lx %016lx %016lx %016lx\n", 
-            fdct_sw_out[k+0], fdct_sw_out[k+1], fdct_sw_out[k+2],fdct_sw_out[k+3],
-            fdct_hw_out[k+0], fdct_hw_out[k+1], fdct_hw_out[k+2],fdct_hw_out[k+3]
-        );
-    }
-
-    uint8_t diff[8];
-    uint64_t diff_sum = 0;
-    for(int k=0;k<256;++k)
-    {
-        for(int m=0;m<8;++m)
+        printf("FDCT Test Results SW vs HW:\n");
+        for(int k=0;k<512;k+=4)
         {
-            diff[m] = (uint8_t)((fdct_in[k] >> ((8-m-1)*8))&0xFFu) - (uint8_t)((idct_hw_out[k] >> ((8-m-1)*8))&0xFFu);
-            if(print_values == 1) printf("%02X ", diff[m]);
-            diff_sum += diff[m];
+            printf("%016lx %016lx %016lx %016lx || %016lx %016lx %016lx %016lx\n", 
+                fdct_sw_out[k+0], fdct_sw_out[k+1], fdct_sw_out[k+2],fdct_sw_out[k+3],
+                fdct_hw_out[k+0], fdct_hw_out[k+1], fdct_hw_out[k+2],fdct_hw_out[k+3]
+            );
         }
-        if(print_values == 1) printf("\n");
+
+        uint8_t diff[8];
+        uint64_t diff_sum = 0;
+        for(int k=0;k<256;++k)
+        {
+            for(int m=0;m<8;++m)
+            {
+                diff[m] = (uint8_t)((fdct_in[k] >> ((8-m-1)*8))&0xFFu) - (uint8_t)((idct_hw_out[k] >> ((8-m-1)*8))&0xFFu);
+                if(print_values == 1) printf("%02X ", diff[m]);
+                diff_sum += diff[m];
+            }
+            if(print_values == 1) printf("\n");
+        }
     }
     printf("FDCT2D-IDCT2D Test Succes!\n");
 
@@ -883,11 +894,11 @@ int main(int argc, char **argv)
 
         if(opt == 1) //STFT Test
         {
-            STFT_Test(test_stft_in, test_stft_hw_out, test_stft_sw_out, 2, 1, (uint8_t)pxf, (uint8_t)stfttd);
+            STFT_Test(test_stft_in, test_stft_hw_out, test_stft_sw_out, 2, 0, (uint8_t)pxf, (uint8_t)stfttd);
         }
         else if(opt == 2) //FDCT2D-IDCT2D Test
         {
-            FIDCT2D_Test(test_fdct_in, test_fdct_hw_out, test_fdct_sw_out, test_idct_hw_out, test_idct_sw_out, 1);
+            FIDCT2D_Test(test_fdct_in, test_fdct_hw_out, test_fdct_sw_out, test_idct_hw_out, test_idct_sw_out, 0);
         }
         else if(opt == 3)
         {
@@ -941,6 +952,48 @@ int main(int argc, char **argv)
             }
         }
         else if(opt == 6)
+        {
+            while(1)
+            {
+                //while(processing_loop == 1)
+                //{
+                    stop     = UR_GetStop(); 
+                    ready    = UR_GetReady();
+                    urqf_new = UR_GetQFact();
+                    pxf_new  = UR_GetPixFloor();
+                    wsel_new = UR_GetWindowSel();
+                    if(urqf != urqf_new)
+                    {
+                        urqf = urqf_new;
+                        SetQuality(urqf, g_stdTableY, q_matrix);
+                        Matrix2Vector(q_matrix, qm);
+                        Set_QM(qm);
+                    }
+                    if(pxf != pxf_new)
+                    {
+                        pxf = pxf_new;
+                    }
+                    if(wsel != wsel_new)
+                    {
+                        wsel = wsel_new;
+                    }
+                    
+                    if(stop == 1)
+                    {
+                        stop = 0;
+                        UR_ClearStop();
+                        //break;
+                    }
+                    if(ready == 1)
+                    { 
+                        ready = 0;
+                        ProcessingLoop((uint8_t)wsel, (uint8_t)pxf, stft_in, stft_out, fdct2d_in, fdct2d_out, idct2d_in, idct2d_out, 0);
+                        UR_ClearReady();
+                    }   
+                //}
+            }
+        }
+        else if(opt == 7)
         {
             while(processing_loop == 1)
             {
